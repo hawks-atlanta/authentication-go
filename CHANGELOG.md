@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.6 (2023-08-18)
+
+
+### Bug Fixes
+
+* added missing package lock ([2e3461e](https://github.com/hawks-atlanta/authentication-go/commit/2e3461e4bb63b806a12933ea1ab3f40e8af59b26))
+
 ### [0.0.5](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.4...v0.0.5) (2023-08-18)
 
 
