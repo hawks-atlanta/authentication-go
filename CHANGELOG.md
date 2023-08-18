@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.4...v0.0.5) (2023-08-18)
+
+
+### Bug Fixes
+
+* added missing import ([6cf6cae](https://github.com/hawks-atlanta/authentication-go/commit/6cf6caeaf501d347b2b034a80a277c105d141f68))
+* fmt ([d70dbb7](https://github.com/hawks-atlanta/authentication-go/commit/d70dbb786811537fb07602cf8f644e00aa81dd2d))
+
 ### 0.0.4 (2023-08-18)
 
 
