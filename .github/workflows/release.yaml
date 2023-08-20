@@ -80,7 +80,7 @@ jobs:
       - create-release
     strategy:
       matrix:
-        os: [linux, windows]
+        os: [linux]
         arch: [amd64, "386"]
     steps:
       - uses: actions/checkout@v3

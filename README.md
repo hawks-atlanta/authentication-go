@@ -49,5 +49,3 @@ go tool cover -html ./cover.txt
 
 | [![circle](https://codecov.io/gh/hawks-atlanta/authentication-go/graphs/sunburst.svg?token=V8TWAO2DQH)](https://app.codecov.io/gh/hawks-atlanta/authentication-go) | [![square](https://codecov.io/gh/hawks-atlanta/authentication-go/graphs/tree.svg?token=V8TWAO2DQH)]((https://app.codecov.io/gh/hawks-atlanta/authentication-go)) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-
-
