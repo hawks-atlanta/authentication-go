@@ -21,4 +21,3 @@ Listen address
 ```shell
 authentication --listen :8080
 ```
-
