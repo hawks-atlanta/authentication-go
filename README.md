@@ -3,6 +3,7 @@
 [![Release](https://github.com/hawks-atlanta/authentication-go/actions/workflows/release.yaml/badge.svg)](https://github.com/hawks-atlanta/authentication-go/actions/workflows/release.yaml)
 [![Tagging](https://github.com/hawks-atlanta/authentication-go/actions/workflows/tagging.yaml/badge.svg)](https://github.com/hawks-atlanta/authentication-go/actions/workflows/tagging.yaml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hawks-atlanta/authentication-go)](https://goreportcard.com/report/github.com/hawks-atlanta/authentication-go)
+[![codecov](https://codecov.io/gh/hawks-atlanta/authentication-go/graph/badge.svg?token=V8TWAO2DQH)](https://codecov.io/gh/hawks-atlanta/authentication-go)
 ![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/hawks-atlanta/authentication-go)
 
 Microservice used to authorize user inside the system.
@@ -45,4 +46,7 @@ go tool cover -html ./cover.txt
 | PostgreSQL | 127.0.0.1:5432 | `username:password@database` |
 
 ## Coverage
+
+| [![circle](https://codecov.io/gh/hawks-atlanta/authentication-go/graphs/sunburst.svg?token=V8TWAO2DQH)](https://app.codecov.io/gh/hawks-atlanta/authentication-go) | [![square](https://codecov.io/gh/hawks-atlanta/authentication-go/graphs/tree.svg?token=V8TWAO2DQH)]((https://app.codecov.io/gh/hawks-atlanta/authentication-go)) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
