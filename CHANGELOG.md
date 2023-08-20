@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.11 (2023-08-20)
+
+
+### Bug Fixes
+
+* removed line ([439b5c7](https://github.com/hawks-atlanta/authentication-go/commit/439b5c7d9aba92b5a1ec787561aa924d26d01222))
+
 ### 0.0.10 (2023-08-20)
 
 ### 0.0.9 (2023-08-20)
