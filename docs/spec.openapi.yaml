@@ -1,0 +1,163 @@
+openapi: 3.0.3
+
+info:
+  title: Authentication service
+
+  license:
+    name: MIT
+    url: https://github.com/hawks-atlanta/authentication-go/blob/main/LICENSE
+
+  version: TBA
+
+tags:
+  - name: Authentication
+  - name: Account
+  - name: Authorization
+
+paths:
+  /login:
+    post:
+      tags:
+        - Authentication
+      description: Authenticates to the server
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/credentials'
+      responses:
+        '201':
+          description: Login succeed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/authorization'
+        '401':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        '500':
+          description: Internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /register:
+    post:
+      tags:
+        - Authentication
+      description: Register the new user in the service
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/credentials'
+      responses:
+        '201':
+          description: Registration succeed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/authorization'
+        '409':
+          description: Username already registered
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        '500':
+          description: Internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+  /challenge:
+    post:
+      tags:
+        - Authorization
+      description: Verifies the received token is still valid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/authorization'
+      responses:
+        '200':
+          description: Account token is still valid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/authorization'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        '500':
+          description: Internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+                
+  /account/password:
+    patch:
+      tags:
+        - Account
+      description: Updates the username password
+      requestBody:
+        content:
+          application/json:
+            schema:
+              allOf:
+                - $ref: '#/components/schemas/authorization'
+                - type: object
+                  properties:
+                    currentPassword:
+                      type: string
+                    newPassword:
+                      type: string
+      responses:
+        '200':
+          description: Password updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/authorization'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+        '500':
+          description: Internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+
+components:
+  schemas:
+    error:
+      type: object
+      properties:
+        msg:
+          type: string
+    credentials:
+      type: object
+      properties:
+        username:
+          type: string
+          example: sulcud
+        password:
+          type: string
+          example: password
+    authorization:
+      type: object
+      properties:
+        jwt:
+          type: string
