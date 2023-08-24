@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.13 (2023-08-24)
+
+
+### Bug Fixes
+
+* added user application ([#20](https://github.com/hawks-atlanta/authentication-go/issues/20)) ([b511894](https://github.com/hawks-atlanta/authentication-go/commit/b511894c4ebab07f4a241bf33363763c456b2d00))
+
 ### 0.0.12 (2023-08-20)
 
 
