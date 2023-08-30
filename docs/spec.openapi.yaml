@@ -139,6 +139,36 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/statusResponse'
+  /user/uuid/{username}:
+    get:
+      tags:
+        - Account
+      description: Obtain the uuid of an user by its username
+      parameters:
+        - in: path
+          name: username
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User uuid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/account'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusResponse'
+        '500':
+          description: Internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusResponse'
 
 components:
   schemas:
