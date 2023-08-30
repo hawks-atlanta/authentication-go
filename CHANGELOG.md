@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.5...v0.0.16) (2023-08-30)
+
+
+### Features
+
+* v0.0.10 ([#12](https://github.com/hawks-atlanta/authentication-go/issues/12)) ([96549ef](https://github.com/hawks-atlanta/authentication-go/commit/96549eff4bb24932dec1fca949692bf5efe1395d))
+* v0.0.7 ([#8](https://github.com/hawks-atlanta/authentication-go/issues/8)) ([e9a8acd](https://github.com/hawks-atlanta/authentication-go/commit/e9a8acdf6d14be40ed3c05f62b71de28bab8ad83)), closes [#5](https://github.com/hawks-atlanta/authentication-go/issues/5) [#6](https://github.com/hawks-atlanta/authentication-go/issues/6) [#7](https://github.com/hawks-atlanta/authentication-go/issues/7)
+
+
+### Bug Fixes
+
+* fmt ([1653f19](https://github.com/hawks-atlanta/authentication-go/commit/1653f198fcbed059d14a657afe3b553983e5f531))
+* removed line ([#15](https://github.com/hawks-atlanta/authentication-go/issues/15)) ([6b3899f](https://github.com/hawks-atlanta/authentication-go/commit/6b3899f5c8a3da1f15c0522b452f5dc5a326a601))
+* triggering pipeline ([f1e7475](https://github.com/hawks-atlanta/authentication-go/commit/f1e7475f6d5595c5bcc656136ef6093ff647dcfc))
+
 ### 0.0.15 (2023-08-26)
 
 ### 0.0.14 (2023-08-26)
