@@ -6,8 +6,8 @@ import (
 
 	"github.com/caarlos0/env/v9"
 	"github.com/gin-gonic/gin"
+	"github.com/hawks-atlanta/authentication-go/database"
 	"github.com/hawks-atlanta/authentication-go/internal/config"
-	"github.com/hawks-atlanta/authentication-go/models"
 	"github.com/hawks-atlanta/authentication-go/router"
 )
 
@@ -23,7 +23,7 @@ func init() {
 }
 
 func main() {
-	db, err := models.NewDB(environ.DatabaseEngine, environ.DatabaseDSN)
+	db, err := database.NewDB(environ.DatabaseEngine, environ.DatabaseDSN)
 	if err != nil {
 		log.Fatal(err)
 	}
