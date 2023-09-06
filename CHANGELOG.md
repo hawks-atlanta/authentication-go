@@ -2,6 +2,84 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.21 (2023-09-06)
+
+
+### Features
+
+* register endpoint ([#34](https://github.com/hawks-atlanta/authentication-go/issues/34)) ([8f83aec](https://github.com/hawks-atlanta/authentication-go/commit/8f83aec83444407f51bd6417f0f68379b6465171))
+
+### [0.0.20](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.19...v0.0.20) (2023-09-06)
+
+
+### Features
+
+* register functionality ([78c76c2](https://github.com/hawks-atlanta/authentication-go/commit/78c76c2e54244bcdfdac882e5a9f1e83bbcb113c))
+
+
+### Bug Fixes
+
+* improved coverage in jwt package ([afc672c](https://github.com/hawks-atlanta/authentication-go/commit/afc672cba46d0b46408c59eff0032474b0ec256f))
+
+### 0.0.19 (2023-09-06)
+
+
+### Features
+
+* login ([#33](https://github.com/hawks-atlanta/authentication-go/issues/33)) ([463b1ff](https://github.com/hawks-atlanta/authentication-go/commit/463b1ff9d78f197c7d02e282a755a636cf7d378f))
+
+### [0.0.18](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.5...v0.0.18) (2023-09-06)
+
+
+### Features
+
+* base model ([21483d7](https://github.com/hawks-atlanta/authentication-go/commit/21483d757ac37a68088b7b7f0cd1c3a964f747f6))
+* complete support login ([3844be3](https://github.com/hawks-atlanta/authentication-go/commit/3844be35b11a169c9bc67a1ef688ec609913975f))
+* controller and login call ([afc3629](https://github.com/hawks-atlanta/authentication-go/commit/afc3629797732aadc31a0568f95a557c4865e211))
+* user models ([85707ff](https://github.com/hawks-atlanta/authentication-go/commit/85707ff8b23f6b107c5ed959de39c24e1c6e004a))
+* v0.0.10 ([#12](https://github.com/hawks-atlanta/authentication-go/issues/12)) ([96549ef](https://github.com/hawks-atlanta/authentication-go/commit/96549eff4bb24932dec1fca949692bf5efe1395d))
+* v0.0.7 ([#8](https://github.com/hawks-atlanta/authentication-go/issues/8)) ([e9a8acd](https://github.com/hawks-atlanta/authentication-go/commit/e9a8acdf6d14be40ed3c05f62b71de28bab8ad83)), closes [#5](https://github.com/hawks-atlanta/authentication-go/issues/5) [#6](https://github.com/hawks-atlanta/authentication-go/issues/6) [#7](https://github.com/hawks-atlanta/authentication-go/issues/7)
+
+
+### Bug Fixes
+
+* added coverage for nil username scenario ([ab4ed07](https://github.com/hawks-atlanta/authentication-go/commit/ab4ed079ec800b8d47474a346a889c1bb8758683))
+* fixed old models package references ([5ef4df2](https://github.com/hawks-atlanta/authentication-go/commit/5ef4df24e3b9a2be68a2b0bfa645fad1c98fb655))
+* fmt ([1653f19](https://github.com/hawks-atlanta/authentication-go/commit/1653f198fcbed059d14a657afe3b553983e5f531))
+* improved user model tests ([4f370c8](https://github.com/hawks-atlanta/authentication-go/commit/4f370c8077d1c04673cbe68b27c8074c4b166b1f))
+* removed line ([#15](https://github.com/hawks-atlanta/authentication-go/issues/15)) ([6b3899f](https://github.com/hawks-atlanta/authentication-go/commit/6b3899f5c8a3da1f15c0522b452f5dc5a326a601))
+* renamed connection related configuration ([6e95bf7](https://github.com/hawks-atlanta/authentication-go/commit/6e95bf78f8c3a96bbfd19862604b1d641e04e467))
+* renamed package to models ([029e91f](https://github.com/hawks-atlanta/authentication-go/commit/029e91f4cbcf5cd44013641915e7f4097328e59f))
+* triggering pipeline ([f1e7475](https://github.com/hawks-atlanta/authentication-go/commit/f1e7475f6d5595c5bcc656136ef6093ff647dcfc))
+* updated all dependencies ([21672c5](https://github.com/hawks-atlanta/authentication-go/commit/21672c5ecedd212f4f0f8ee2f128f646f4969cb4))
+* updated dependencies ([4315fb4](https://github.com/hawks-atlanta/authentication-go/commit/4315fb40ff7d44701d54ee3424d430c74e3d9daf))
+
+### [0.0.17](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.5...v0.0.17) (2023-09-06)
+
+
+### Features
+
+* base model ([21483d7](https://github.com/hawks-atlanta/authentication-go/commit/21483d757ac37a68088b7b7f0cd1c3a964f747f6))
+* complete support login ([3844be3](https://github.com/hawks-atlanta/authentication-go/commit/3844be35b11a169c9bc67a1ef688ec609913975f))
+* controller and login call ([afc3629](https://github.com/hawks-atlanta/authentication-go/commit/afc3629797732aadc31a0568f95a557c4865e211))
+* user models ([85707ff](https://github.com/hawks-atlanta/authentication-go/commit/85707ff8b23f6b107c5ed959de39c24e1c6e004a))
+* v0.0.10 ([#12](https://github.com/hawks-atlanta/authentication-go/issues/12)) ([96549ef](https://github.com/hawks-atlanta/authentication-go/commit/96549eff4bb24932dec1fca949692bf5efe1395d))
+* v0.0.7 ([#8](https://github.com/hawks-atlanta/authentication-go/issues/8)) ([e9a8acd](https://github.com/hawks-atlanta/authentication-go/commit/e9a8acdf6d14be40ed3c05f62b71de28bab8ad83)), closes [#5](https://github.com/hawks-atlanta/authentication-go/issues/5) [#6](https://github.com/hawks-atlanta/authentication-go/issues/6) [#7](https://github.com/hawks-atlanta/authentication-go/issues/7)
+
+
+### Bug Fixes
+
+* added coverage for nil username scenario ([ab4ed07](https://github.com/hawks-atlanta/authentication-go/commit/ab4ed079ec800b8d47474a346a889c1bb8758683))
+* fixed old models package references ([5ef4df2](https://github.com/hawks-atlanta/authentication-go/commit/5ef4df24e3b9a2be68a2b0bfa645fad1c98fb655))
+* fmt ([1653f19](https://github.com/hawks-atlanta/authentication-go/commit/1653f198fcbed059d14a657afe3b553983e5f531))
+* improved user model tests ([4f370c8](https://github.com/hawks-atlanta/authentication-go/commit/4f370c8077d1c04673cbe68b27c8074c4b166b1f))
+* removed line ([#15](https://github.com/hawks-atlanta/authentication-go/issues/15)) ([6b3899f](https://github.com/hawks-atlanta/authentication-go/commit/6b3899f5c8a3da1f15c0522b452f5dc5a326a601))
+* renamed connection related configuration ([6e95bf7](https://github.com/hawks-atlanta/authentication-go/commit/6e95bf78f8c3a96bbfd19862604b1d641e04e467))
+* renamed package to models ([029e91f](https://github.com/hawks-atlanta/authentication-go/commit/029e91f4cbcf5cd44013641915e7f4097328e59f))
+* triggering pipeline ([f1e7475](https://github.com/hawks-atlanta/authentication-go/commit/f1e7475f6d5595c5bcc656136ef6093ff647dcfc))
+* updated all dependencies ([21672c5](https://github.com/hawks-atlanta/authentication-go/commit/21672c5ecedd212f4f0f8ee2f128f646f4969cb4))
+* updated dependencies ([4315fb4](https://github.com/hawks-atlanta/authentication-go/commit/4315fb40ff7d44701d54ee3424d430c74e3d9daf))
+
 ### [0.0.16](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.5...v0.0.16) (2023-08-30)
 
 

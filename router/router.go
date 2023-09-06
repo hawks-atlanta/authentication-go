@@ -2,12 +2,12 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"gorm.io/gorm"
+	"github.com/hawks-atlanta/authentication-go/controller"
 )
 
 type Router struct {
 	*gin.Engine
-	DB *gorm.DB
+	C *controller.Controller
 }
 
 func New(opts ...Option) *gin.Engine {
@@ -17,6 +17,8 @@ func New(opts ...Option) *gin.Engine {
 	}
 
 	r.Any(EchoRoute, r.AnyEcho)
+	r.POST(LoginRoute, r.Login)
+	r.POST(RegisterRoute, r.Register)
 
 	return r.Engine
 }
