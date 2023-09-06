@@ -18,6 +18,7 @@ func New(opts ...Option) *gin.Engine {
 
 	r.Any(EchoRoute, r.AnyEcho)
 	r.POST(LoginRoute, r.Login)
+	r.POST(RegisterRoute, r.Register)
 
 	return r.Engine
 }
