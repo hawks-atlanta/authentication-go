@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.19 (2023-09-06)
+
+
+### Features
+
+* login ([#33](https://github.com/hawks-atlanta/authentication-go/issues/33)) ([463b1ff](https://github.com/hawks-atlanta/authentication-go/commit/463b1ff9d78f197c7d02e282a755a636cf7d378f))
+
 ### [0.0.18](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.5...v0.0.18) (2023-09-06)
 
 
