@@ -8,12 +8,9 @@ type JWT struct {
 	secret []byte
 }
 
-func (j *JWT) New(claims jwt.Claims) string {
+func (j *JWT) New(claims jwt.Claims) (signedJWT string) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS512, claims)
-	signedJWT, err := token.SignedString(j.secret)
-	if err != nil {
-		panic(err)
-	}
+	signedJWT, _ = token.SignedString(j.secret)
 	return signedJWT
 }
 

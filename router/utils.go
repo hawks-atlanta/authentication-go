@@ -1,8 +1,9 @@
 package router
 
 const (
-	EchoRoute  = "/echo"
-	LoginRoute = "/login"
+	EchoRoute     = "/echo"
+	LoginRoute    = "/login"
+	RegisterRoute = "/register"
 )
 
 type Result struct {
