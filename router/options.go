@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/gin-gonic/gin"
-	"gorm.io/gorm"
+	"github.com/hawks-atlanta/authentication-go/controller"
 )
 
 type Option func(r *Router)
@@ -13,8 +13,8 @@ func WithEngine(e *gin.Engine) Option {
 	}
 }
 
-func WithDatabase(db *gorm.DB) Option {
+func WithController(c *controller.Controller) Option {
 	return func(r *Router) {
-		r.DB = db
+		r.C = c
 	}
 }
