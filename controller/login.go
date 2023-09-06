@@ -17,7 +17,7 @@ func (c *Controller) Login(creds *models.User) (user models.User, err error) {
 		err = ErrUnauthorized
 		return user, err
 	}
-	err = c.
+	err = c.DB.
 		Where("username = ?", *creds.Username).
 		First(&user).
 		Error
