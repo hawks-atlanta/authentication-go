@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.20](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.19...v0.0.20) (2023-09-06)
+
+
+### Features
+
+* register functionality ([78c76c2](https://github.com/hawks-atlanta/authentication-go/commit/78c76c2e54244bcdfdac882e5a9f1e83bbcb113c))
+
+
+### Bug Fixes
+
+* improved coverage in jwt package ([afc672c](https://github.com/hawks-atlanta/authentication-go/commit/afc672cba46d0b46408c59eff0032474b0ec256f))
+
 ### 0.0.19 (2023-09-06)
 
 
