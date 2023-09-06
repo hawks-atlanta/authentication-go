@@ -57,4 +57,18 @@ func TestController_Login(t *testing.T) {
 		_, err = c.Login(&models.User{Username: u.Username, Password: "WRONG"})
 		assertions.NotNil(err)
 	}))
+	t.Run("No Username", database.Test(func(t *testing.T, db *gorm.DB) {
+		assertions := assert.New(t)
+		c, err := New(WithDB(db))
+		assertions.Nil(err)
+
+		u := models.RandomUser()
+		err = db.
+			Create(u).
+			Error
+		assertions.Nil(err)
+
+		_, err = c.Login(&models.User{Password: u.Password})
+		assertions.NotNil(err)
+	}))
 }
