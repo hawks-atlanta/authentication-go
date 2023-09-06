@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.21 (2023-09-06)
+
+
+### Features
+
+* register endpoint ([#34](https://github.com/hawks-atlanta/authentication-go/issues/34)) ([8f83aec](https://github.com/hawks-atlanta/authentication-go/commit/8f83aec83444407f51bd6417f0f68379b6465171))
+
 ### [0.0.20](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.19...v0.0.20) (2023-09-06)
 
 
