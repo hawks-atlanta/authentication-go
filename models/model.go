@@ -8,13 +8,13 @@ import (
 )
 
 type Model struct {
-	UUID      uuid.UUID  `json:"uuid" gorm:"primaryKey"`
+	UUID      uuid.UUID  `json:"uuid" gorm:"primaryKey;"`
 	CreatedAt time.Time  `json:"-"`
 	UpdatedAt time.Time  `json:"-"`
 	DeletedAt *time.Time `json:"-" sql:"index"`
 }
 
-func (m *Model) BeforeSave(tx *gorm.DB) error {
+func (m *Model) BeforeCreate(tx *gorm.DB) error {
 	if m.UUID == uuid.Nil {
 		m.UUID = uuid.New()
 	}

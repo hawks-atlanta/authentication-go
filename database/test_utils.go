@@ -7,6 +7,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 )
 
 var nextDB atomic.Int64
@@ -28,6 +29,7 @@ func Test(testFunc func(*testing.T, *gorm.DB)) func(*testing.T) {
 		t.Run(SQLite, func(t *testing.T) {
 			db, err := NewDB(SQLite, nextSQLite())
 			assert.Nil(t, err)
+			db.Logger = logger.Default.LogMode(logger.Silent)
 			defer Close(t, db)
 
 			testFunc(t, db)
@@ -35,6 +37,7 @@ func Test(testFunc func(*testing.T, *gorm.DB)) func(*testing.T) {
 		t.Run(PostgreSQL, func(t *testing.T) {
 			db, err := NewDB(PostgreSQL, postgresDSN)
 			assert.Nil(t, err)
+			db.Logger = logger.Default.LogMode(logger.Silent)
 			defer Close(t, db)
 
 			testFunc(t, db)
