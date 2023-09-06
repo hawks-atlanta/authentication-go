@@ -7,6 +7,7 @@ require (
 	github.com/gavv/httpexpect/v2 v2.15.0
 	github.com/gin-gonic/gin v1.9.1
 	github.com/glebarez/sqlite v1.9.0
+	github.com/google/uuid v1.3.0
 	github.com/stretchr/testify v1.8.3
 	gorm.io/driver/postgres v1.5.2
 	gorm.io/gorm v1.25.4
@@ -31,7 +32,6 @@ require (
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
-	github.com/google/uuid v1.3.0 // indirect
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/imkira/go-interpol v1.1.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
