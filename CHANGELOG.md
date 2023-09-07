@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.22](https://github.com/hawks-atlanta/authentication-go/compare/v0.0.5...v0.0.22) (2023-09-07)
+
+
+### Features
+
+* authorization prefix ([f951146](https://github.com/hawks-atlanta/authentication-go/commit/f951146b15219fb42f78235a2badcc64059a083f))
+* authorize controller operation ([22845c6](https://github.com/hawks-atlanta/authentication-go/commit/22845c65026f853061f8e1302dd48d670e0af537))
+* challenge endpoint ([f4f23c8](https://github.com/hawks-atlanta/authentication-go/commit/f4f23c85a63354860221ff38f42394b71508e362))
+* update password ([5b2d77f](https://github.com/hawks-atlanta/authentication-go/commit/5b2d77fb0041731c8819948ddccef0bd33d6ede2))
+* user uuid by username ([c81b42f](https://github.com/hawks-atlanta/authentication-go/commit/c81b42f27428b8ab0f25dbcbd88bd6ebb3a3ac86))
+* v0.0.10 ([#12](https://github.com/hawks-atlanta/authentication-go/issues/12)) ([96549ef](https://github.com/hawks-atlanta/authentication-go/commit/96549eff4bb24932dec1fca949692bf5efe1395d))
+* v0.0.21 ([#35](https://github.com/hawks-atlanta/authentication-go/issues/35)) ([e2302d5](https://github.com/hawks-atlanta/authentication-go/commit/e2302d52080936b1ca6113c87c655c527f79b4b0)), closes [#33](https://github.com/hawks-atlanta/authentication-go/issues/33) [#34](https://github.com/hawks-atlanta/authentication-go/issues/34)
+* v0.0.7 ([#8](https://github.com/hawks-atlanta/authentication-go/issues/8)) ([e9a8acd](https://github.com/hawks-atlanta/authentication-go/commit/e9a8acdf6d14be40ed3c05f62b71de28bab8ad83)), closes [#5](https://github.com/hawks-atlanta/authentication-go/issues/5) [#6](https://github.com/hawks-atlanta/authentication-go/issues/6) [#7](https://github.com/hawks-atlanta/authentication-go/issues/7)
+
+
+### Bug Fixes
+
+* added missing env setup in dockerfile related to JWT secret ([e035eed](https://github.com/hawks-atlanta/authentication-go/commit/e035eed7fc422a842c4547491e7b261f72b3f391))
+* fmt ([1653f19](https://github.com/hawks-atlanta/authentication-go/commit/1653f198fcbed059d14a657afe3b553983e5f531))
+* removed line ([#15](https://github.com/hawks-atlanta/authentication-go/issues/15)) ([6b3899f](https://github.com/hawks-atlanta/authentication-go/commit/6b3899f5c8a3da1f15c0522b452f5dc5a326a601))
+* triggering pipeline ([f1e7475](https://github.com/hawks-atlanta/authentication-go/commit/f1e7475f6d5595c5bcc656136ef6093ff647dcfc))
+
 ### 0.0.21 (2023-09-06)
 
 

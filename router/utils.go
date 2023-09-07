@@ -1,9 +1,28 @@
 package router
 
+import "fmt"
+
 const (
-	EchoRoute     = "/echo"
-	LoginRoute    = "/login"
-	RegisterRoute = "/register"
+	UsernameParam = "username"
+)
+
+const (
+	RootRoute               = "/"
+	EchoRoute               = "/echo"
+	LoginRoute              = "/login"
+	RegisterRoute           = "/register"
+	ChallengeRoute          = "/challenge"
+	AccountPasswordRoute    = "/account/password"
+	UserUUIDRoute           = "/user/uuid"
+	UserUUIDWithParamsRoute = UserUUIDRoute + "/:" + UsernameParam
+)
+
+const (
+	AuthorizationHeader = "Authorization"
+)
+
+const (
+	SessionVariale = "SESSION"
 )
 
 type Result struct {
@@ -15,4 +34,12 @@ var UnauthorizedResult = Result{Succeed: false, Message: "unauthorized"}
 
 func InternalServerError(err error) Result {
 	return Result{Succeed: false, Message: err.Error()}
+}
+
+func SucceedResult(msg string) Result {
+	return Result{Succeed: true, Message: msg}
+}
+
+func Bearer(tok string) string {
+	return fmt.Sprintf("Bearer %s", tok)
 }

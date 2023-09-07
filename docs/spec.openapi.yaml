@@ -75,21 +75,18 @@ paths:
                 $ref: '#/components/schemas/statusResponse'
   /challenge:
     post:
+      security:
+        - bearerAuth: []
       tags:
         - Authorization
       description: Verifies the received token is still valid
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/authorization'
       responses:
         '200':
-          description: Account token is still valid
+          description: Fresh JWT
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/account'
+                $ref: '#/components/schemas/authorization'
         '401':
           description: Unauthorized
           content:
@@ -105,6 +102,8 @@ paths:
                 
   /account/password:
     patch:
+      security:
+        - bearerAuth: []
       tags:
         - Account
       description: Updates the username password
@@ -112,14 +111,12 @@ paths:
         content:
           application/json:
             schema:
-              allOf:
-                - $ref: '#/components/schemas/authorization'
-                - type: object
-                  properties:
-                    currentPassword:
-                      type: string
-                    newPassword:
-                      type: string
+              type: object
+              properties:
+                  currentPassword:
+                    type: string
+                  newPassword:
+                    type: string
       responses:
         '200':
           description: Password updated successfully
@@ -141,6 +138,8 @@ paths:
                 $ref: '#/components/schemas/statusResponse'
   /user/uuid/{username}:
     get:
+      security:
+        - bearerAuth: []
       tags:
         - Account
       description: Obtain the uuid of an user by its username
@@ -171,6 +170,11 @@ paths:
                 $ref: '#/components/schemas/statusResponse'
 
 components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
   schemas:
     account:
       type: object
