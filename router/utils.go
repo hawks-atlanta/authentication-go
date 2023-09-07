@@ -7,6 +7,7 @@ const (
 	EchoRoute            = "/echo"
 	LoginRoute           = "/login"
 	RegisterRoute        = "/register"
+	ChallengeRoute       = "/challenge"
 	AccountPasswordRoute = "/account/password"
 )
 
