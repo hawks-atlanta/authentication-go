@@ -6,15 +6,17 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/hawks-atlanta/authentication-go/controller"
+	"github.com/hawks-atlanta/authentication-go/models"
 )
 
-func (r *Router) Authorize(ctx *gin.Context) {
-	header := ctx.GetHeader(AuthorizationHeader)
-	if len(header) < 7 {
-		ctx.AbortWithStatusJSON(http.StatusUnauthorized, UnauthorizedResult)
+func (r *Router) UpdatePassword(ctx *gin.Context) {
+	var req controller.UpdatePasswordRequest
+	err := ctx.Bind(&req)
+	if err != nil {
 		return
 	}
-	user, err := r.C.Authorize(header[7:])
+	session := ctx.MustGet(SessionVariale).(*models.User)
+	err = r.C.UpdatePassword(session, &req)
 	if err != nil {
 		if errors.Is(err, controller.ErrUnauthorized) {
 			ctx.AbortWithStatusJSON(http.StatusUnauthorized, UnauthorizedResult)
@@ -23,6 +25,5 @@ func (r *Router) Authorize(ctx *gin.Context) {
 		ctx.AbortWithStatusJSON(http.StatusInternalServerError, InternalServerError(err))
 		return
 	}
-	ctx.Set(SessionVariale, &user)
-	ctx.Next()
+	ctx.AbortWithStatusJSON(http.StatusOK, SucceedResult("Password updated successfully"))
 }
