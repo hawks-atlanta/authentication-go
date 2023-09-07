@@ -18,6 +18,7 @@ USER application
 COPY --from=builder /build/ /opt/application
 WORKDIR /opt/application/db
 WORKDIR /
+ENV JWT_SECRET      "CAPY_FILE"
 ENV DATABASE_ENGINE "sqlite"
 ENV DATABASE_DSN    "/opt/application/db/database.db?cache=shared&mode=rwc"
 ENTRYPOINT ["/opt/application/authentication-go", ":8080"]
