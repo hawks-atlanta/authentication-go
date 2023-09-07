@@ -15,8 +15,8 @@ import (
 
 type User struct {
 	Model
-	Username     *string `json:"username" gorm:"unique;not null;"`
-	Password     string  `json:"password" gorm:"-"`
+	Username     *string `json:"username,omitempty" gorm:"unique;not null;"`
+	Password     string  `json:"password,omitempty" gorm:"-"`
 	PasswordHash []byte  `json:"-" gorm:"not null;"`
 }
 

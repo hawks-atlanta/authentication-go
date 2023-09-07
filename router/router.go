@@ -16,9 +16,13 @@ func New(opts ...Option) *gin.Engine {
 		opt(&r)
 	}
 
-	r.Any(EchoRoute, r.AnyEcho)
 	r.POST(LoginRoute, r.Login)
 	r.POST(RegisterRoute, r.Register)
+	// Authentication required
+	authReq := r.Group(RootRoute, r.Authorize)
+	authReq.PATCH(AccountPasswordRoute, r.UpdatePassword)
+	authReq.GET(UserUUIDWithParamsRoute, r.UserByUsername)
+	authReq.Any(ChallengeRoute, r.Challenge)
 
 	return r.Engine
 }
