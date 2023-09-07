@@ -3,12 +3,18 @@ package router
 import "fmt"
 
 const (
-	RootRoute            = "/"
-	EchoRoute            = "/echo"
-	LoginRoute           = "/login"
-	RegisterRoute        = "/register"
-	ChallengeRoute       = "/challenge"
-	AccountPasswordRoute = "/account/password"
+	UsernameParam = "username"
+)
+
+const (
+	RootRoute               = "/"
+	EchoRoute               = "/echo"
+	LoginRoute              = "/login"
+	RegisterRoute           = "/register"
+	ChallengeRoute          = "/challenge"
+	AccountPasswordRoute    = "/account/password"
+	UserUUIDRoute           = "/user/uuid"
+	UserUUIDWithParamsRoute = UserUUIDRoute + "/:" + UsernameParam
 )
 
 const (

@@ -21,6 +21,7 @@ func New(opts ...Option) *gin.Engine {
 	// Authentication required
 	authReq := r.Group(RootRoute, r.Authorize)
 	authReq.PATCH(AccountPasswordRoute, r.UpdatePassword)
+	authReq.GET(UserUUIDWithParamsRoute, r.UserByUsername)
 	authReq.Any(ChallengeRoute, r.Challenge)
 
 	return r.Engine
