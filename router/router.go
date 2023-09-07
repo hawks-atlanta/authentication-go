@@ -16,9 +16,10 @@ func New(opts ...Option) *gin.Engine {
 		opt(&r)
 	}
 
-	r.Any(EchoRoute, r.AnyEcho)
 	r.POST(LoginRoute, r.Login)
 	r.POST(RegisterRoute, r.Register)
+	// Authentication required
+	_ = r.Group(RootRoute, r.Authorize)
 
 	return r.Engine
 }

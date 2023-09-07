@@ -1,9 +1,18 @@
 package router
 
 const (
+	RootRoute     = "/"
 	EchoRoute     = "/echo"
 	LoginRoute    = "/login"
 	RegisterRoute = "/register"
+)
+
+const (
+	AuthorizationHeader = "Authorization"
+)
+
+const (
+	SessionVariale = "SESSION"
 )
 
 type Result struct {
