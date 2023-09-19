@@ -17,6 +17,6 @@ func (r *Router) UserByUsername(ctx *gin.Context) {
 		ctx.JSON(http.StatusInternalServerError, InternalServerError(err))
 		return
 	}
-	res := models.User{Username: user.Username}
+	res := models.User{Model: user.Model, Username: user.Username}
 	ctx.JSON(http.StatusOK, res)
 }
