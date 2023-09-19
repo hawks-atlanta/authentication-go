@@ -12,7 +12,7 @@ info:
 tags:
   - name: Authentication
   - name: Account
-  - name: Authorization
+  - name: Authorization3
 
 paths:
   /login:
@@ -136,6 +136,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/statusResponse'
+
   /user/uuid/{username}:
     get:
       security:
@@ -169,6 +170,95 @@ paths:
               schema:
                 $ref: '#/components/schemas/statusResponse'
 
+  /logs:
+    get:
+      tags:
+        - Logs
+      description: Display all system transactions
+      responses:
+        '200':
+          description: Logs found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusResponse'
+        '500':
+          description: Internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusResponse'
+
+  /logs/user:
+    post:
+      tags:
+        - Logs
+      description: Display all system transactions filter by username
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                  object:
+                    type: object
+                    properties:
+                      username:
+                        type: string
+                  itemsPerPage:
+                    type: integer
+                  page:
+                    type: integer
+      responses:
+        '200':
+          description: User logs found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusResponse'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusResponse'
+        '500':
+          description: Internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusResponse'
+
+    /logs/date:
+    post:
+      tags:
+        - Logs
+      description: Display all system transactions filter by date
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                  object:
+                    type: string
+                  itemsPerPage:
+                    type: integer
+                  page:
+                    type: integer
+      responses:
+        '200':
+          description: Logs found by date
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusResponse'
+        '500':
+          description: Internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/statusResponse'
 components:
   securitySchemes:
     bearerAuth:
