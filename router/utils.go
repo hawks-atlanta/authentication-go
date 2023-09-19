@@ -14,6 +14,10 @@ const (
 	ChallengeRoute          = "/challenge"
 	AccountPasswordRoute    = "/account/password"
 	LogsRoute               = "/logs"
+	UserRoute               = "/user"
+	LogsUserRoute           = LogsRoute + UserRoute
+	DateRoute               = "/date"
+	LogsDateRoute           = LogsRoute + DateRoute
 	UserUUIDRoute           = "/user/uuid"
 	UserUUIDWithParamsRoute = UserUUIDRoute + "/:" + UsernameParam
 )

@@ -19,8 +19,8 @@ func (r *Router) Register(ctx *gin.Context) {
 		ctx.JSON(http.StatusInternalServerError, InternalServerError(err))
 		return
 	}
-	log := models.Log{User: user, UserUUID: user.UUID, Action: "Registro de usuario", IpAddress: ipaddr.GetIpAddr(ctx)}
-	err = r.C.Log(&log)
+	log := models.Log{User: &user, UserUUID: user.UUID, Action: "User registration", IpAddress: ipaddr.GetIpAddr(ctx)}
+	err = r.C.CreateLog(&log)
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, InternalServerError(err))
 		return
