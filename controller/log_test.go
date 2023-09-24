@@ -58,6 +58,6 @@ func TestLog(t *testing.T) {
 
 		logs, err = c.GetLogsByDate(&Filter[time.Time]{Object: time.Now().Add(-time.Hour * 1), ItemsPerPage: 10, Page: 1})
 		assertions.Nil(err)
-		assertions.Equal(len(logs), 1, "The logs length filtered by user should be equal to 1")
+		assertions.Equal(len(logs), 1, "The logs length filtered by date should be equal to 1")
 	}))
 }
