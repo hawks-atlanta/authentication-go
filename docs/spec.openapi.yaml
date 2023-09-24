@@ -12,7 +12,7 @@ info:
 tags:
   - name: Authentication
   - name: Account
-  - name: Authorization3
+  - name: Authorization
 
 paths:
   /login:
