@@ -18,6 +18,7 @@ func (r *Router) UserByUsername(ctx *gin.Context) {
 		ctx.JSON(http.StatusInternalServerError, InternalServerError(err))
 		return
 	}
+
 	log := models.Log{User: &user, UserUUID: user.UUID, Action: "Got user by username", IpAddress: ipaddr.GetIpAddr(ctx)}
 	err = r.C.CreateLog(&log)
 	if err != nil {
@@ -25,5 +26,6 @@ func (r *Router) UserByUsername(ctx *gin.Context) {
 		return
 	}
 	res := models.User{Username: user.Username}
+  
 	ctx.JSON(http.StatusOK, res)
 }

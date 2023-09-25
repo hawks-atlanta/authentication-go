@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.25 (2023-09-19)
+
+
+### Bug Fixes
+
+* added the model to the user object of the response ([#41](https://github.com/hawks-atlanta/authentication-go/issues/41)) ([b5ced2f](https://github.com/hawks-atlanta/authentication-go/commit/b5ced2f571de7e4d22efe831e1050dee22888a97))
+
+### 0.0.24 (2023-09-12)
+
 ### 0.0.23 (2023-09-07)
 
 
