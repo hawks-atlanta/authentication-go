@@ -5,6 +5,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/hawks-atlanta/authentication-go/controller"
+	"github.com/hawks-atlanta/authentication-go/internal/utils/ipaddr"
 	"github.com/hawks-atlanta/authentication-go/models"
 )
 
@@ -17,6 +18,14 @@ func (r *Router) UserByUsername(ctx *gin.Context) {
 		ctx.JSON(http.StatusInternalServerError, InternalServerError(err))
 		return
 	}
-	res := models.User{Model: user.Model, Username: user.Username}
+
+	log := models.Log{User: &user, UserUUID: user.UUID, Action: "Got user by username", IpAddress: ipaddr.GetIpAddr(ctx)}
+	err = r.C.CreateLog(&log)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, InternalServerError(err))
+		return
+	}
+	res := models.User{Username: user.Username}
+  
 	ctx.JSON(http.StatusOK, res)
 }

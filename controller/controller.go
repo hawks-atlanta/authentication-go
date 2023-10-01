@@ -17,7 +17,7 @@ type (
 func WithDB(db *gorm.DB) Option {
 	return func(c *Controller) error {
 		c.DB = db
-		return c.DB.AutoMigrate(&models.User{})
+		return c.DB.AutoMigrate(&models.User{}, &models.Log{})
 	}
 }
 

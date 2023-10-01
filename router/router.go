@@ -18,6 +18,9 @@ func New(opts ...Option) *gin.Engine {
 
 	r.POST(LoginRoute, r.Login)
 	r.POST(RegisterRoute, r.Register)
+	r.GET(LogsRoute, r.GetLogs)
+	r.POST(LogsUserRoute, r.GetLogByUser)
+	r.POST(LogsDateRoute, r.GetLogByDate)
 	// Authentication required
 	authReq := r.Group(RootRoute, r.Authorize)
 	authReq.PATCH(AccountPasswordRoute, r.UpdatePassword)
