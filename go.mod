@@ -16,6 +16,8 @@ require (
 	gorm.io/gorm v1.25.4
 )
 
+require github.com/jaswdr/faker v1.10.2 // indirect
+
 require (
 	github.com/ajg/form v1.5.1 // indirect
 	github.com/andybalholm/brotli v1.0.5 // indirect
@@ -23,6 +25,7 @@ require (
 	github.com/chenzhuoyu/base64x v0.0.0-20230717121745-296ad89f973d // indirect
 	github.com/chenzhuoyu/iasm v0.9.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/ddosify/go-faker v0.1.1
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/fatih/color v1.15.0 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
