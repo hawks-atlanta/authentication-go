@@ -229,7 +229,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/statusResponse'
 
-    /logs/date:
+  /logs/date:
     post:
       tags:
         - Logs
