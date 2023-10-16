@@ -2,7 +2,6 @@ package models
 
 import (
 	"fmt"
-	"regexp"
 	"time"
 
 	"github.com/brianvoe/gofakeit/v6"
@@ -51,8 +50,6 @@ func (u *User) BeforeSave(tx *gorm.DB) (err error) {
 	}
 	return err
 }
-
-var phoneRegex = regexp.MustCompile(`(?m)^\d{2,18}$`)
 
 var (
 	True  = true
