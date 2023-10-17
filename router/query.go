@@ -29,3 +29,24 @@ func (r *Router) UserByUsername(ctx *gin.Context) {
 	res := models.User{Model: user.Model, Username: user.Username}
 	ctx.JSON(http.StatusOK, res)
 }
+
+func (r *Router) UsernameByUUID(ctx *gin.Context) {
+	var req = controller.UserRequest{
+		UUID: ctx.Param(UUIDParam),
+	}
+	user, err := r.C.UsernameByUUID(&req)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, InternalServerError(err))
+		return
+	}
+
+	log := models.Log{User: &user, UserUUID: user.UUID, Action: "Got username by uuid", IpAddress: ipaddr.GetIpAddr(ctx)}
+	err = r.C.CreateLog(&log)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, InternalServerError(err))
+		return
+	}
+
+	res := models.User{Model: user.Model, Username: user.Username}
+	ctx.JSON(http.StatusOK, res)
+}
