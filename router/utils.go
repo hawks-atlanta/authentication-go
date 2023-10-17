@@ -4,22 +4,25 @@ import "fmt"
 
 const (
 	UsernameParam = "username"
+	UUIDParam     = "uuid"
 )
 
 const (
-	RootRoute               = "/"
-	EchoRoute               = "/echo"
-	LoginRoute              = "/login"
-	RegisterRoute           = "/register"
-	ChallengeRoute          = "/challenge"
-	AccountPasswordRoute    = "/account/password"
-	LogsRoute               = "/logs"
-	UserRoute               = "/user"
-	LogsUserRoute           = LogsRoute + UserRoute
-	DateRoute               = "/date"
-	LogsDateRoute           = LogsRoute + DateRoute
-	UserUUIDRoute           = "/user/uuid"
-	UserUUIDWithParamsRoute = UserUUIDRoute + "/:" + UsernameParam
+	RootRoute                     = "/"
+	EchoRoute                     = "/echo"
+	LoginRoute                    = "/login"
+	RegisterRoute                 = "/register"
+	ChallengeRoute                = "/challenge"
+	AccountPasswordRoute          = "/account/password"
+	LogsRoute                     = "/logs"
+	UserRoute                     = "/user"
+	LogsUserRoute                 = LogsRoute + UserRoute
+	DateRoute                     = "/date"
+	LogsDateRoute                 = LogsRoute + DateRoute
+	UserUUIDRoute                 = "/user/uuid"
+	UserUUIDWithParamsRoute       = UserUUIDRoute + "/:" + UsernameParam
+	UsernameByUUIDRoute           = "/user/username"
+	UsernameByUUIDWithParamsRoute = UsernameByUUIDRoute + "/:" + UUIDParam
 )
 
 const (

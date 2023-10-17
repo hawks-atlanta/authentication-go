@@ -29,3 +29,23 @@ func TestUserByUsername(t *testing.T) {
 		assertions.Equal(u.UUID, ou.UUID)
 	}))
 }
+
+func TestUsernameByUUID(t *testing.T) {
+	t.Run("Succeed", database.Test(func(t *testing.T, db *gorm.DB) {
+		assertions := assert.New(t)
+
+		c, err := New(WithDB(db), WithSecret(random.String(16)))
+		assertions.Nil(err)
+
+		u := models.RandomUser()
+		err = c.Register(u)
+		assertions.Nil(err)
+
+		req := UserRequest{
+			UUID: u.UUID.String(),
+		}
+		ou, err := c.UsernameByUUID(&req)
+
+		assertions.Equal(u.Username, ou.Username)
+	}))
+}
