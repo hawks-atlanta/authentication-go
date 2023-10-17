@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.31 (2023-10-17)
+
+
+### Features
+
+* added get user Username by UUID ([046e645](https://github.com/hawks-atlanta/authentication-go/commit/046e64512f13384b3fcf94efedfba8af13668a37))
+
 ### 0.0.30 (2023-10-16)
 
 ### 0.0.29 (2023-10-07)
