@@ -40,6 +40,8 @@ type Result struct {
 
 var UnauthorizedResult = Result{Succeed: false, Message: "unauthorized"}
 
+var DuplicatedUserResult = Result{Succeed: false, Message: "the username is already in use"}
+
 func InternalServerError(err error) Result {
 	return Result{Succeed: false, Message: err.Error()}
 }

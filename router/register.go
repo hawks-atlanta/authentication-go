@@ -1,9 +1,12 @@
 package router
 
 import (
+	"fmt"
 	"net/http"
+	"strings"
 
 	"github.com/gin-gonic/gin"
+	"github.com/hawks-atlanta/authentication-go/controller"
 	"github.com/hawks-atlanta/authentication-go/internal/utils/ipaddr"
 	"github.com/hawks-atlanta/authentication-go/models"
 )
@@ -16,6 +19,13 @@ func (r *Router) Register(ctx *gin.Context) {
 	}
 	err = r.C.Register(&user)
 	if err != nil {
+		if strings.Contains(err.Error(), controller.ErrDuplicatedUSer.Error()) {
+			ctx.AbortWithStatusJSON(http.StatusConflict, DuplicatedUserResult)
+			return
+		} else {
+			fmt.Println(err)
+			fmt.Println(controller.ErrDuplicatedUSer)
+		}
 		ctx.JSON(http.StatusInternalServerError, InternalServerError(err))
 		return
 	}
