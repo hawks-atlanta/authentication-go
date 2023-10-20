@@ -45,7 +45,7 @@ func TestRouter_Register(t *testing.T) {
 			POST(RegisterRoute).
 			WithJSON(u).
 			Expect().
-			Status(http.StatusInternalServerError)
+			Status(http.StatusConflict)
 	}))
 	t.Run("Invalid JSON", database.Test(func(t *testing.T, db *gorm.DB) {
 		expect, closeFunc := NewDefault(t, db)
