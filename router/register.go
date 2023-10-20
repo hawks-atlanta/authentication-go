@@ -1,7 +1,6 @@
 package router
 
 import (
-	"fmt"
 	"net/http"
 	"strings"
 
@@ -22,9 +21,6 @@ func (r *Router) Register(ctx *gin.Context) {
 		if strings.Contains(err.Error(), controller.ErrDuplicatedUSer.Error()) {
 			ctx.AbortWithStatusJSON(http.StatusConflict, DuplicatedUserResult)
 			return
-		} else {
-			fmt.Println(err)
-			fmt.Println(controller.ErrDuplicatedUSer)
 		}
 		ctx.JSON(http.StatusInternalServerError, InternalServerError(err))
 		return
